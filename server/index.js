@@ -39,6 +39,8 @@ async function start() {
     return next()
   }, nuxt.render)
 
+  app.use(nuxt.render)
+
   // Listen the server
   app.listen(port, host)
   consola.ready({

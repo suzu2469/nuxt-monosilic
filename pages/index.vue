@@ -6,6 +6,8 @@
         :key="key"
       >{{ product.name }}: {{ product.price }}</li>
     </ul>
+    <!-- クライアントスクリプトが実行されてるか確認用 -->
+    <div>{{ getHello() }}</div>
   </section>
 </template>
 
@@ -14,6 +16,11 @@ export default {
   asyncData({ res }) {
     return {
       products: res.context.products
+    }
+  },
+  methods: {
+    getHello() {
+      return 'HelloWorld'
     }
   }
 }
